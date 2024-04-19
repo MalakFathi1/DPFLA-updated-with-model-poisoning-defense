@@ -274,6 +274,7 @@ class Arguments:
                "Model Name: {}\n".format(self.model_name) + \
                "Data distribution: {}\n".format(self.dd_type) + \
                "Aggregation rule: {}\n".format(self.rule) + \
-               "Attack Type: {}\n".format(self.attack_type) + \
+               "Attack Type 1: {}\n".format(self.attack_type1) + \
+               "Attack Type 2: {}\n".format(self.attack_type2) + \
                "Malicious Rate: {}%\n".format(np.round(self.malicious_rate * 100, 2)) + \
                "Malicious Behavior Rate: {}\n".format(self.malicious_behavior_rate)

@@ -12,7 +12,7 @@ import pandas as pd
 
 
 def distribute_dataset(dataset_name, num_peers, num_classes, dd_type='IID', classes_per_peer=1, samples_per_class=582,
-                       alpha=1):
+                       alpha=0.5):
     logger.info("--> Loading of {} dataset".format(dataset_name))
     tokenizer = None
     if dataset_name == 'MNIST':

@@ -4,16 +4,16 @@ from federated_learning.my_dict import run_mnist, run_cifar10
 from federated_learning.my_dict import fed_avg, simple_median, trimmed_mean, multi_krum, fools_gold, DPFLA
 
 if __name__ == '__main__':
-    NUM_WORKERS = 50
+    NUM_WORKERS = 20
     FRAC_WORKERS = 1
     ATTACK_TYPE1 = "gaussian"
-    #ATTACK_TYPE = "backdoor"
-    ATTACK_TYPE2 ="gaussian"
-    GLOBAL_ROUND = 50
+    ATTACK_TYPE2 = "gaussian"
+    #ATTACK_TYPE2 ="gaussian"
+    GLOBAL_ROUND = 100
     LOCAL_EPOCH = 1
     UNTARGET = False
 
-    REPLACE_METHOD = replace_6_with_9()
+    REPLACE_METHOD = replace_1_with_7()
     RULE = DPFLA()
     DATASET = run_mnist()
 
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     # RULE = DPFLA()
     # DATASET = run_cifar10()
 
-    MALICIOUS_RATE = [0, 0.1, 0.2, 0.3, 0.4]  # 0, 0.1, 0.2, 0.3, 0.4, 0.5
+    MALICIOUS_RATE = [0.1, 0.2, 0.3, 0.4,0.5,0.6,0.7,0.8]  # 0, 0.1, 0.2, 0.3, 0.4, 0.5
     MALICIOUS_BEHAVIOR_RATE = 1
 
     for rate in MALICIOUS_RATE:

@@ -9,6 +9,7 @@ def gaussian_attack(update, client_pseudonym, malicious_behavior_rate=0,
     flag = 0
     for key in update.keys():
         r = np.random.random()
+        print(r)
         if r <= malicious_behavior_rate:
             # print('Gausiian noise attack launched by ', client_pseudonym, ' targeting ', key, i+1)
             noise = torch.FloatTensor(update[key].shape).normal_(mean=mean, std=std)

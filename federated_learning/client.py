@@ -40,7 +40,7 @@ class Client():
         self.client_type = client_type
 
     # ======================================= Start of training function ===========================================================#
-    def participant_update(self, global_epoch, model, attack_type1='no_attack',attack_type2='no_attack', malicious_behavior_rate=0,
+    def participant_update(self, global_epoch, model, attack_type1,attack_type2, malicious_behavior_rate=0,
                            source_class=None, target_class=None, dataset_name=None, untarget=False):
 
 
@@ -76,6 +76,7 @@ class Client():
         train_loader = DataLoader(self.local_data, self.local_bs, shuffle=True, drop_last=True)
         attacked = 0
         # Get the poisoned training data of the client in case of label-flipping or backdoor attacks
+        
         if (attack_type1 == 'label_flipping' or attack_type2 =='label_flipping') and (self.client_type == 'attacker'):
             r = np.random.random()
             if r <= malicious_behavior_rate:
@@ -110,6 +111,8 @@ class Client():
                 if dataset_name == 'IMDB':
                     target = target.view(-1, 1) * (1 - attacked)
 
+                
+
                 if (attack_type1 == 'backdoor' or attack_type2== 'backdoor' ) and (self.client_type == 'attacker') and (
                         np.random.random() <= malicious_behavior_rate):
                     pdata = data.clone()
@@ -141,7 +144,7 @@ class Client():
                 optimizer.zero_grad()
 
             # print('Train epoch: {} \tLoss: {:.6f}'.format((epochs+1), np.mean(epoch_loss)))
-
+        
         if ((attack_type1 == 'gaussian'or attack_type2== 'gaussian') and self.client_type == 'attacker'):
             update, flag = gaussian_attack(model.state_dict(), self.client_pseudonym,
                                            malicious_behavior_rate=malicious_behavior_rate, device=self.device)

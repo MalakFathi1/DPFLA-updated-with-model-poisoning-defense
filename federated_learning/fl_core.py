@@ -122,39 +122,34 @@ class FL:
 
     # ======================================= Start of testning function ===========================================================#
     def test(self, model, device, test_loader, dataset_name=None):
-        model.eval()
-        test_loss = []
-        correct = 0
-        n = 0
-        true_positives, false_positives, true_negatives, false_negatives = 0, 0, 0, 0
+     model.eval()
+     test_loss = []
+     true_labels = []
+     predicted_labels = []
 
-        for batch_idx, (data, target) in enumerate(test_loader):
-            data, target = data.to(self.device), target.to(self.device)
-            output = model(data)
-            if dataset_name == 'IMDB':
-                test_loss.append(self.criterion(output, target.view(-1, 1)).item())  # sum up batch loss
-                pred = output > 0.5  # get the index of the max log-probability
-                correct += pred.eq(target.view_as(pred)).sum().item()
-            else:
-                test_loss.append(self.criterion(output, target).item())  # sum up batch loss
-                pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-                correct += pred.eq(target.view_as(pred)).sum().item()
+     for batch_idx, (data, target) in enumerate(test_loader):
+        data, target = data.to(device), target.to(device)
+        output = model(data)
+        if dataset_name == 'IMDB':
+            test_loss.append(self.criterion(output, target.view(-1, 1)).item())
+            pred = (output > 0.5).float()
+        else:
+            test_loss.append(self.criterion(output, target).item())
+            pred = output.argmax(dim=1, keepdim=True)
+        true_labels.extend(target.cpu().numpy())
+        predicted_labels.extend(pred.cpu().numpy())
 
-            n += target.shape[0]
-            true_positives += ((pred == 1) & (target == 1)).sum().item()
-            false_positives += ((pred == 1) & (target == 0)).sum().item()
-            true_negatives += ((pred == 0) & (target == 0)).sum().item()
-            false_negatives += ((pred == 0) & (target == 1)).sum().item()
+     test_loss = np.mean(test_loss)
 
-        test_loss = np.mean(test_loss)
-        precision = true_positives / (true_positives + false_positives + 1e-9)
-        recall = true_positives / (true_positives + false_negatives + 1e-9)
-        f1_score = 2 * (precision * recall) / (precision + recall + 1e-9)
-        logger.debug('Average test loss: {:.4f}, Test accuracy: {}/{} ({:.2f}%)'.format(test_loss, correct, n,
-                                                                                        100 * correct / n))
-        logger.debug('Precision: {:.4f}, Recall: {:.4f}, F1 Score: {:.4f}'.format(precision, recall, f1_score))
+     accuracy = accuracy_score(true_labels, predicted_labels)
+     precision = precision_score(true_labels, predicted_labels ,average='macro')
+     recall = recall_score(true_labels, predicted_labels , average='macro')
+     f1_score = 2 * (precision * recall) / (precision + recall + 1e-9)
 
-        return 100.0 * (float(correct) / n), test_loss , precision , recall , f1_score
+     logger.debug('Average test loss: {:.4f}, Test accuracy: {:.2f}%'.format(test_loss, 100 * accuracy))
+     logger.debug('Precision: {:.4f}, Recall: {:.4f}, F1 Score: {:.4f}'.format(precision, recall, f1_score))
+
+     return 100.0 * accuracy, test_loss, precision, recall, f1_score
 
     # ======================================= End of testning function =============================================================#
     # Test label prediction function
@@ -175,11 +170,11 @@ class FL:
                 predictions.extend(prediction)
         return [i.item() for i in actuals], [i.item() for i in predictions]
 
-    def calculate_detection_accuracy(self, actuals, predictions, attack_type=None, target_class=None):
-        if attack_type == 'label_flipping':
+    def calculate_detection_accuracy(self, actuals, predictions, attack_type1=None,attack_type2=None, target_class=None):
+        if (attack_type1 == 'label_flipping' or attack_type2=='label_flipping'):
             misclassified_count = sum(actual != pred for actual, pred in zip(actuals, predictions))
             detection_accuracy = 1.0 - (misclassified_count / len(actuals))
-        elif attack_type == 'backdoor':
+        elif (attack_type1 == 'backdoor' or attack_type2=='backdoor'):
             backdoor_detected_count = sum(pred == target_class for pred in predictions)
             detection_accuracy = backdoor_detected_count / len(actuals)
         else:
@@ -215,7 +210,7 @@ class FL:
             n += bk_target.shape[0]
         return np.round(100.0 * (float(correct) / n), 2)
 
-    def run_experiment(self, attack_type1='no_attack',attack_type2='no_attack', malicious_behavior_rate=0,
+    def run_experiment(self, attack_type1,attack_type2, malicious_behavior_rate=0,
                        source_class=None, target_class=None, rule='fedavg', resume=False, model_name=None,
                        untarget=False):
         simulation_model = copy.deepcopy(self.global_model)
@@ -363,6 +358,7 @@ class FL:
                         model_weight_list.append(model_weight)
 
                     model_weight_rfa = compute_geometric_median(model_weight_list, weights=None).median[0]
+                    logger.debug("Entered RFA and Performed geometric median")
                     current_idx = 0
                     for key in net_para:
                         length = len(net_para[key].reshape(-1))
@@ -372,6 +368,7 @@ class FL:
                 t = time.time() - cur_time
                 logger.debug('Aggregation took', np.round(t, 4))
                 cpu_runtimes.append(t)
+                logger.debug('Global weights',global_weights)
 
             else:
                 global_weights = average_weights(local_weights, [1 for i in range(len(local_weights))])
