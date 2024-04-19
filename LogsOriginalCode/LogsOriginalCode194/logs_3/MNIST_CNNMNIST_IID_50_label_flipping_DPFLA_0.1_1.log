@@ -1,0 +1,30 @@
+2024-04-17 15:26:06.093 | DEBUG    | federated_learning.arguments:log:245 - Arguments: 
+Batch Size: 64
+Test Batch Size: 1000
+Global Rounds: 100
+Local Epochs: 1
+Learning Rate: 0.01
+Momentum: 0.9
+Device: cpu
+Log Interval: 100
+Number of Clients: 50
+Dataset: MNIST
+Model Name: CNNMNIST
+Data distribution: IID
+Aggregation rule: DPFLA
+Attack Type: label_flipping
+Malicious Rate: 10.0%
+Malicious Behavior Rate: 1
+
+2024-04-17 15:26:06.103 | INFO     | federated_learning.utils.sampling:distribute_dataset:16 - --> Loading of MNIST dataset
+2024-04-17 15:26:24.944 | INFO     | federated_learning.utils.sampling:distribute_dataset:31 - --> Dataset has been loaded!
+2024-04-17 15:26:24.946 | INFO     | federated_learning.models.model:setup_model:22 - --> Creating CNNMNIST model.....
+2024-04-17 15:26:24.950 | INFO     | federated_learning.models.model:setup_model:43 - --> Model has been created!
+2024-04-17 15:26:24.952 | INFO     | federated_learning.fl_core:__init__:86 - --> Distributing training data among clients
+2024-04-17 15:26:24.953 | INFO     | federated_learning.fl_core:__init__:94 - --> Training data have been distributed among clients
+2024-04-17 15:26:24.955 | INFO     | federated_learning.fl_core:__init__:97 - --> Creating peets instances
+2024-04-17 15:26:25.299 | INFO     | federated_learning.fl_core:run_experiment:200 - ===>Simulation started...
+2024-04-17 15:26:25.301 | INFO     | federated_learning.fl_core:run_experiment:231 - ====>Global model training started...
+2024-04-17 15:26:25.463 | DEBUG    | federated_learning.fl_core:run_experiment:238 - | Global training round : 1/100 |
+2024-04-17 15:26:31.780 | INFO     | federated_learning.client:participant_update:87 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-17 15:26:38.200 | INFO     | federated_learning.client:participant_update:87 - Label flipping attack launched by Client 40 to flip class 1 to class 7
