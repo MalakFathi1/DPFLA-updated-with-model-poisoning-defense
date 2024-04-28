@@ -343,7 +343,7 @@ class FL:
                 # W = generate_orthogonal_matrix(n=n * self.num_clients, reuse=True)
                 # Ws = [W[:, e * n: e * n + n][0, :].reshape(-1, 1) for e in range(self.num_clients)]
 
-                scores = dpfla.score(copy.deepcopy(simulation_model),
+                scores ,good_update_indices = dpfla.score(copy.deepcopy(simulation_model),
                                      copy.deepcopy(local_models),
                                      clients_types=clients_types,
                                      selected_clients=selected_clients, p=m, w=n)
@@ -358,13 +358,23 @@ class FL:
                         model_weight_list.append(model_weight)
 
                     model_weight_rfa = compute_geometric_median(model_weight_list, weights=None).median[0]
-                    logger.debug("Entered RFA and Performed geometric median")
+                    #model_weights_list = [get_weight(local_models[idx].state_dict()) for idx in benign_indices]
+                    #model_weights_mean = torch.stack(model_weight_list)
+                    #model_weights_mean=torch.mean(model_weights_mean,dim=0).squeeze(0)
+                    #model_weights_median = torch.median(torch.stack(model_weight_list), dim=0).values.squeeze(0)
+                    
+
+                    #for key in net_para:
+                         #global_weights[key] = model_weights_mean
+                    #logger.debug("Entered RFA and Performed Geometric new median")
                     current_idx = 0
                     for key in net_para:
                         length = len(net_para[key].reshape(-1))
-                        global_weights[key] = model_weight_rfa[current_idx:current_idx + length].reshape(net_para[key].shape)
+                        global_weights[key] = model_weight_rfa[ current_idx:current_idx + length].reshape(net_para[key].shape)
                         current_idx += length
-               # global_weights = average_weights(local_weights, scores)
+                scores_two= np.ones(20)
+                #global_weights = average_weights(model_weight_dict_list, scores_two)
+               # global_weights = average_weights(model_weight_list, [1 for _ in range(len(model_weight_list))])
                 t = time.time() - cur_time
                 logger.debug('Aggregation took', np.round(t, 4))
                 cpu_runtimes.append(t)

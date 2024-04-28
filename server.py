@@ -5,7 +5,7 @@ from federated_learning.my_dict import get_cifar10_labels_dict, get_mnist_labels
 
 
 def generate_log_file(args):
-    savepath = './logs_3/' + args.get_dataset_name() + '_' + args.get_model_name() + '_' + args.get_dd_type() +'_' + str(args.get_number_of_clients())  + '_' + args.get_attack_type1() + '_' + args.get_attack_type2() + '_' + args.get_rule() +'_' + "With RFA Second Trial" + '_' + str(
+    savepath = './logs_3/' + args.get_dataset_name() + '_' + args.get_model_name() + '_' + args.get_dd_type() +'_' + str(args.get_number_of_clients())  + '_' + args.get_attack_type1() + '_' + args.get_attack_type2() + '_' + args.get_rule() +'_' + "+ DBscan + RFA Saturday Full Metrics" + '_' + str(
         args.get_malicious_rate()) + '_' + str(args.get_local_epochs()) + '.log'
     return savepath
 

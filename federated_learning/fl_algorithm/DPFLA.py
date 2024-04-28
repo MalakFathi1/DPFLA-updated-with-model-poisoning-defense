@@ -3,16 +3,15 @@ import time
 import numpy as np
 import os
 import pickle
-from sklearn.cluster import KMeans
+from sklearn.cluster import DBSCAN  # Import DBSCAN
 from loguru import logger
 import matplotlib.pyplot as plt
-from sklearn.metrics import silhouette_score, calinski_harabasz_score
-import sklearn.metrics.pairwise as smp
+from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
-
+from sklearn.metrics import precision_score, recall_score, f1_score
 
 class DPFLA:
-    def __init__(self):
+    def _init_(self):
         pass
 
     def score(self, global_model, local_models, clients_types, selected_clients, p, w):
@@ -54,21 +53,41 @@ class DPFLA:
             res = U * sigma[:2]
             detect_res_list.append(res)
 
-        coefficient_list, score_list = batch_detect_outliers_kmeans(detect_res_list)
-
-        max_sc = max(coefficient_list)
-        max_sc_idx = coefficient_list.index(max_sc)
-        scores = score_list[max_sc_idx] if max_sc >= 0.70 else np.ones(n, dtype=int)
+        scores = batch_detect_outliers_dbscan(detect_res_list)
 
         logger.debug("-------------------------------------")
-        logger.debug("Max Silhouette Coefficient: " + str(max_sc))
-        logger.debug("Detect Class: " + str(max_sc_idx))
         logger.debug("Defense result:")
+
+        final_scores = scores[-1]  # Extracting the final scores
+
         for i, pt in enumerate(clients_types):
-            logger.info(str(pt) + ' scored ' + str(scores[i]))
+            logger.info(f"{pt} scored {final_scores[i]}")
+
+
+        bad_update_count = np.sum(np.logical_and(np.array(clients_types) == "Bad update", final_scores == 0))
+        good_update_count = np.sum(np.logical_and(np.array(clients_types) == "Good update", final_scores == 1))
+        total_errored = bad_update_count + good_update_count
+        
+        total_updates =len(clients_types)
+        percentage_bad_updates_scored_one = (total_errored / total_updates) * 100 if total_updates > 0 else 0
+        
+        true_labels = np.array([1 if ct == "Good update" else 0 for ct in clients_types])
+        predicted_labels = np.array(final_scores)
+        precision = precision_score(true_labels, predicted_labels)
+        recall = recall_score(true_labels, predicted_labels)
+        f1 = f1_score(true_labels, predicted_labels)
+
+        
+        logger.debug("Number of Bad updates scoring 0: ".format(bad_update_count))
+        logger.debug("Number of Good updates scoring 1: ".format(good_update_count))
+
+        logger.debug("Clustering Accuracy: {:.2f}%".format(percentage_bad_updates_scored_one))
+        logger.debug("Clustering Precision: {:.4f}".format(precision))
+        logger.debug("Clustering Recall: {:.4f}".format(recall))
+        logger.debug("Clustering F1-score: {:.4f}".format(f1))
 
         # 返回得分列表
-        return scores
+        return final_scores ,np.where(scores == 1)[0]
 
 
 def generate_orthogonal_matrix(n, reuse=False, block_size=None):
@@ -108,55 +127,17 @@ def calculate_parameter_gradients(params_1, params_2):
     return np.array([x for x in np.subtract(params_1, params_2)])
 
 
-def detect_outliers_kmeans(data, n_clusters=2):
-    # 初始化K-means模型
-    kmeans = KMeans(n_clusters=n_clusters, random_state=0)
-    # 训练模型
-    kmeans.fit(data)
-    # 预测聚类标签
-    labels = kmeans.predict(data)
-    # 计算轮廓系数
-    coefficient = silhouette_score(data, labels)
-    logger.debug("Silhouette Coefficient：{}", coefficient)
-    # calinski_harabasz = calinski_harabasz_score(data, labels)
-    # logger.debug("Calinski Harabasz：{}", calinski_harabasz)
-    if coefficient < 0.61:
-        return np.ones(len(data), dtype=int)
-
-    scores = labels
-    if sum(labels) < len(data) / 2:
-        scores = 1 - labels
-    else:
-        scores = labels
-
-    return scores
-
-
-def batch_detect_outliers_kmeans(list, n_clusters=2):
-    # 初始化K-means模型
-    kmeans = KMeans(n_clusters=n_clusters, random_state=0)
-
-    coefficient_list = []
-    score_list = []
+def batch_detect_outliers_dbscan(list, eps=0.5, min_samples=5):
+    scores_list = []
 
     for data in list:
-        # 训练模型
-        kmeans.fit(data)
-        # 预测聚类标签
-        labels = kmeans.predict(data)
-        # 计算轮廓系数
-        coefficient = silhouette_score(data, labels)
-        coefficient_list.append(coefficient)
-        logger.debug("Silhouette Coefficient：{}", coefficient)
-
-        scores = labels
-        if sum(labels) < len(data) / 2:
-            scores = 1 - labels
-        else:
-            scores = labels
-
-        score_list.append(scores)
-    return coefficient_list, score_list
+        # 训练DBSCAN模型
+        dbscan = DBSCAN(eps=eps, min_samples=min_samples)
+        dbscan.fit(data)
+        labels = dbscan.labels_
+        scores = np.where(labels == -1, 0, 1)  # Assign 0 for outliers, 1 for inliers
+        scores_list.append(scores)
+    return scores_list
 
 
 def svd(x):

@@ -1,0 +1,1051 @@
+2024-04-28 16:05:38.351 | DEBUG    | federated_learning.arguments:log:261 - Arguments: 
+Batch Size: 64
+Test Batch Size: 1000
+Global Rounds: 100
+Local Epochs: 1
+Learning Rate: 0.01
+Momentum: 0.9
+Device: cpu
+Log Interval: 100
+Number of Clients: 20
+Dataset: MNIST
+Model Name: CNNMNIST
+Data distribution: IID
+Aggregation rule: DPFLA
+Attack Type 1: label_flipping
+Attack Type 2: gaussian
+Malicious Rate: 70.0%
+Malicious Behavior Rate: 1
+
+2024-04-28 16:05:38.363 | INFO     | federated_learning.utils.sampling:distribute_dataset:16 - --> Loading of MNIST dataset
+2024-04-28 16:06:07.537 | INFO     | federated_learning.utils.sampling:distribute_dataset:31 - --> Dataset has been loaded!
+2024-04-28 16:06:07.539 | INFO     | federated_learning.models.model:setup_model:22 - --> Creating CNNMNIST model.....
+2024-04-28 16:06:07.544 | INFO     | federated_learning.models.model:setup_model:43 - --> Model has been created!
+2024-04-28 16:06:07.546 | INFO     | federated_learning.fl_core:__init__:86 - --> Distributing training data among clients
+2024-04-28 16:06:07.550 | INFO     | federated_learning.fl_core:__init__:94 - --> Training data have been distributed among clients
+2024-04-28 16:06:07.551 | INFO     | federated_learning.fl_core:__init__:97 - --> Creating peets instances
+2024-04-28 16:06:11.324 | INFO     | federated_learning.fl_core:run_experiment:218 - ===>Simulation started...
+2024-04-28 16:06:11.328 | INFO     | federated_learning.fl_core:run_experiment:249 - ====>Global model training started...
+2024-04-28 16:06:11.580 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 1/100 |
+2024-04-28 16:06:11.587 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:06:18.400 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:06:35.986 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:06:43.513 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:07:00.123 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:07:08.282 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:07:15.497 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:07:23.115 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:07:29.808 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:07:36.704 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:07:44.321 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:07:50.948 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:07:58.221 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:08:10.382 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:08:23.152 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:08:23.155 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:08:23.156 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.157 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.159 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:08:23.162 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:08:23.164 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 1
+2024-04-28 16:08:23.167 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.169 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:08:23.173 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:08:23.178 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.180 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 1
+2024-04-28 16:08:23.183 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.186 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.192 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.195 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.197 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.199 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.201 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.206 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:08:23.208 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:08:23.211 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:08:23.231 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:08:23.235 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:08:23.238 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 90.00%
+2024-04-28 16:08:23.240 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 0.7500
+2024-04-28 16:08:23.244 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:08:23.246 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 0.8571
+2024-04-28 16:08:23.290 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:08:23.293 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:08:43.605 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 2.2733, Test accuracy: 19.71%
+2024-04-28 16:08:43.607 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.2323, Recall: 0.1939, F1 Score: 0.2114
+2024-04-28 16:08:43.618 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:09:02.525 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.19710000000000005
+2024-04-28 16:09:02.527 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:09:02.538 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 0.0
+2024-04-28 16:09:02.540 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 8.4
+2024-04-28 16:09:02.543 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 55.7
+2024-04-28 16:09:02.545 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 17.7
+2024-04-28 16:09:02.547 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 0.0
+2024-04-28 16:09:02.548 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 0.1
+2024-04-28 16:09:02.550 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 0.0
+2024-04-28 16:09:02.553 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 19.8
+2024-04-28 16:09:02.556 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 36.7
+2024-04-28 16:09:02.558 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 55.5
+2024-04-28 16:09:02.754 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 2/100 |
+2024-04-28 16:09:02.758 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:09:09.358 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:09:16.532 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:09:24.292 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:09:31.600 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:09:45.926 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:09:56.479 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:10:06.347 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:10:20.344 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:10:26.908 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:10:33.362 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:10:43.920 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:10:50.298 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:11:00.803 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:11:17.876 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:11:17.880 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:11:17.881 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.883 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.887 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.891 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.894 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.896 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:11:17.899 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.901 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.902 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.904 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:11:17.905 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.906 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.908 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.910 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:11:17.912 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.914 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.915 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:11:17.918 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:11:17.920 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:11:17.921 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:11:17.935 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:11:17.937 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:11:17.940 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:11:17.943 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:11:17.946 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:11:17.948 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:11:17.993 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:11:17.997 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:11:39.259 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 2.2390, Test accuracy: 37.55%
+2024-04-28 16:11:39.261 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.6319, Recall: 0.3647, F1 Score: 0.4625
+2024-04-28 16:11:39.276 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:11:59.254 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.37549999999999994
+2024-04-28 16:11:59.258 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:11:59.276 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 9.6
+2024-04-28 16:11:59.279 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 55.8
+2024-04-28 16:11:59.282 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 60.4
+2024-04-28 16:11:59.284 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 45.2
+2024-04-28 16:11:59.286 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 1.1
+2024-04-28 16:11:59.289 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 0.6
+2024-04-28 16:11:59.291 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 2.6
+2024-04-28 16:11:59.294 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 66.1
+2024-04-28 16:11:59.296 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 49.8
+2024-04-28 16:11:59.352 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 73.5
+2024-04-28 16:11:59.603 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 3/100 |
+2024-04-28 16:11:59.609 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:12:10.683 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:12:18.036 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:12:24.854 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:12:36.819 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:12:47.977 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:12:55.441 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:13:03.444 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:13:11.266 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:13:19.573 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:13:30.989 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:13:38.602 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:13:51.671 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:14:01.274 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:14:18.368 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:14:18.370 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:14:18.372 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.373 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:14:18.375 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.376 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.379 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.381 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:14:18.383 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.386 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:14:18.388 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.417 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.457 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.465 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.504 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.542 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:14:18.569 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.573 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.578 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:14:18.585 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.589 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:14:18.595 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:14:18.612 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:14:18.614 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:14:18.617 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:14:18.621 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:14:18.625 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:14:18.638 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:14:18.671 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:14:18.677 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:14:39.311 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 2.1765, Test accuracy: 54.60%
+2024-04-28 16:14:39.313 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.6648, Recall: 0.5337, F1 Score: 0.5921
+2024-04-28 16:14:39.326 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:14:58.239 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.546
+2024-04-28 16:14:58.241 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:14:58.256 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 60.8
+2024-04-28 16:14:58.258 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 87.2
+2024-04-28 16:14:58.261 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 57.8
+2024-04-28 16:14:58.265 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 60.2
+2024-04-28 16:14:58.268 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 20.5
+2024-04-28 16:14:58.270 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 1.8
+2024-04-28 16:14:58.272 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 31.2
+2024-04-28 16:14:58.325 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 85.8
+2024-04-28 16:14:58.327 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 67.5
+2024-04-28 16:14:58.330 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 61.0
+2024-04-28 16:14:58.526 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 4/100 |
+2024-04-28 16:14:58.531 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:15:05.402 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:15:18.420 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:15:31.388 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:15:48.976 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:15:57.456 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:16:04.208 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:16:10.885 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:16:17.432 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:16:23.884 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:16:31.961 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:16:38.927 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:16:49.300 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:16:57.068 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:17:09.159 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:17:09.160 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:17:09.162 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.164 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.166 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:17:09.168 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.170 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:17:09.173 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.175 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:17:09.176 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:17:09.177 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.179 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.180 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.181 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.184 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.186 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.188 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.189 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 1
+2024-04-28 16:17:09.192 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:17:09.193 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.195 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:17:09.196 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:17:09.213 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:17:09.215 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:17:09.217 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 95.00%
+2024-04-28 16:17:09.218 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 0.8571
+2024-04-28 16:17:09.223 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:17:09.224 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 0.9231
+2024-04-28 16:17:09.259 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:17:09.261 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:17:30.330 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 2.0346, Test accuracy: 62.50%
+2024-04-28 16:17:30.334 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.6856, Recall: 0.6155, F1 Score: 0.6487
+2024-04-28 16:17:30.353 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:17:48.978 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.625
+2024-04-28 16:17:48.982 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:17:48.998 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 92.1
+2024-04-28 16:17:49.000 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 94.7
+2024-04-28 16:17:49.001 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 39.6
+2024-04-28 16:17:49.005 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 70.8
+2024-04-28 16:17:49.008 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 46.4
+2024-04-28 16:17:49.009 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 6.6
+2024-04-28 16:17:49.011 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 67.1
+2024-04-28 16:17:49.013 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 89.5
+2024-04-28 16:17:49.015 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 71.8
+2024-04-28 16:17:49.017 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 36.8
+2024-04-28 16:17:49.191 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 5/100 |
+2024-04-28 16:17:49.195 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:17:55.649 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:18:02.493 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:18:11.169 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:18:18.288 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:18:30.711 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:18:38.728 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:18:46.693 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:18:54.452 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:19:10.981 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:19:21.408 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:19:29.586 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:19:44.876 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:19:51.811 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:20:03.739 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:20:03.741 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:20:03.743 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.744 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.747 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.754 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.757 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.763 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:20:03.765 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.767 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.772 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.774 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.778 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:20:03.781 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:20:03.783 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.788 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.794 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.801 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:20:03.808 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:20:03.813 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.817 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:20:03.818 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:20:03.843 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:20:03.847 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:20:03.849 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:20:03.851 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:20:03.854 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:20:03.855 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:20:04.094 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:20:04.095 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:20:28.196 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 1.7620, Test accuracy: 68.30%
+2024-04-28 16:20:28.199 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.7126, Recall: 0.6736, F1 Score: 0.6926
+2024-04-28 16:20:28.211 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:20:51.629 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.683
+2024-04-28 16:20:51.633 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:20:51.653 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 95.2
+2024-04-28 16:20:51.656 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 96.9
+2024-04-28 16:20:51.659 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 54.1
+2024-04-28 16:20:51.662 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 78.7
+2024-04-28 16:20:51.665 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 72.6
+2024-04-28 16:20:51.668 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 11.1
+2024-04-28 16:20:51.673 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 73.0
+2024-04-28 16:20:51.675 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 90.0
+2024-04-28 16:20:51.683 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 63.1
+2024-04-28 16:20:51.691 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 38.9
+2024-04-28 16:20:51.941 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 6/100 |
+2024-04-28 16:20:56.780 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:21:05.092 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:21:15.616 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:21:24.281 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:21:31.516 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:21:38.657 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:21:49.480 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:21:56.267 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:22:02.666 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:22:09.774 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:22:20.991 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:22:57.772 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:23:22.421 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:23:34.499 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:23:47.004 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:23:47.008 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:23:47.012 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:23:47.016 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.019 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.022 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.026 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.028 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.030 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.033 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:23:47.037 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.039 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.041 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.045 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.046 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.048 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:23:47.050 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:23:47.052 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.063 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:23:47.066 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:23:47.070 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.072 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:23:47.101 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:23:47.110 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:23:47.121 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:23:47.129 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:23:47.136 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:23:47.138 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:23:47.162 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:23:47.165 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:24:21.002 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 1.3789, Test accuracy: 74.64%
+2024-04-28 16:24:21.011 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.7635, Recall: 0.7390, F1 Score: 0.7510
+2024-04-28 16:24:21.024 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:24:51.329 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.7464
+2024-04-28 16:24:51.332 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:24:51.353 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 92.7
+2024-04-28 16:24:51.356 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 97.6
+2024-04-28 16:24:51.357 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 68.1
+2024-04-28 16:24:51.359 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 81.0
+2024-04-28 16:24:51.362 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 72.4
+2024-04-28 16:24:51.365 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 33.0
+2024-04-28 16:24:51.366 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 83.2
+2024-04-28 16:24:51.368 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 88.9
+2024-04-28 16:24:51.371 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 61.5
+2024-04-28 16:24:51.373 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 60.7
+2024-04-28 16:24:51.641 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 7/100 |
+2024-04-28 16:24:51.653 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:25:08.891 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:25:28.625 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:25:40.436 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:25:59.805 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:26:10.451 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:26:29.255 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:26:41.863 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:26:55.572 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:27:07.364 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:27:18.348 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:27:34.470 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:27:44.192 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:27:54.999 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:28:14.209 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:28:14.213 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:28:14.219 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.226 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:28:14.237 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.241 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:28:14.243 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 1
+2024-04-28 16:28:14.245 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.249 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:28:14.251 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.254 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.256 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:28:14.259 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.262 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 1
+2024-04-28 16:28:14.268 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.271 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.274 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.277 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:28:14.279 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.286 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 1
+2024-04-28 16:28:14.292 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:28:14.295 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:28:14.325 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:28:14.328 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:28:14.333 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 85.00%
+2024-04-28 16:28:14.335 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 0.6667
+2024-04-28 16:28:14.337 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:28:14.341 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 0.8000
+2024-04-28 16:28:14.408 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:28:14.411 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:28:46.745 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 1.0474, Test accuracy: 79.80%
+2024-04-28 16:28:46.751 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8013, Recall: 0.7926, F1 Score: 0.7969
+2024-04-28 16:28:46.771 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:29:16.762 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.798
+2024-04-28 16:29:16.767 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:29:16.785 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 95.6
+2024-04-28 16:29:16.790 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 96.7
+2024-04-28 16:29:16.793 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 79.4
+2024-04-28 16:29:16.794 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 85.7
+2024-04-28 16:29:16.797 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 84.2
+2024-04-28 16:29:16.799 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 51.1
+2024-04-28 16:29:16.801 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 83.1
+2024-04-28 16:29:16.809 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 87.9
+2024-04-28 16:29:16.813 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 63.7
+2024-04-28 16:29:16.816 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 65.1
+2024-04-28 16:29:17.114 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 8/100 |
+2024-04-28 16:29:23.374 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:29:44.611 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:29:59.230 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:30:13.885 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:30:40.395 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:30:54.251 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:31:05.478 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:31:16.180 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:31:32.833 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:31:42.510 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:31:58.520 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:32:14.073 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:32:23.629 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:32:33.375 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:32:51.402 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:32:51.405 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:32:51.408 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:32:51.409 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.411 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:32:51.412 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.415 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.416 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.417 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:32:51.419 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.422 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.424 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.426 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.428 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:32:51.430 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.433 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.435 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.439 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:32:51.441 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.447 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.450 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:32:51.453 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:32:51.477 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:32:51.482 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:32:51.485 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:32:51.487 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:32:51.491 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:32:51.495 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:32:51.536 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:32:51.543 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:33:22.525 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.8248, Test accuracy: 82.52%
+2024-04-28 16:33:22.527 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8257, Recall: 0.8215, F1 Score: 0.8236
+2024-04-28 16:33:22.542 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:33:52.364 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8251999999999999
+2024-04-28 16:33:52.366 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:33:52.394 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 95.9
+2024-04-28 16:33:52.399 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 95.2
+2024-04-28 16:33:52.401 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 85.5
+2024-04-28 16:33:52.406 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 85.9
+2024-04-28 16:33:52.411 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 87.9
+2024-04-28 16:33:52.435 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 64.5
+2024-04-28 16:33:52.462 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 85.4
+2024-04-28 16:33:52.467 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 87.5
+2024-04-28 16:33:52.470 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 67.7
+2024-04-28 16:33:52.473 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 66.1
+2024-04-28 16:33:52.827 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 9/100 |
+2024-04-28 16:33:52.849 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:34:16.046 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:34:27.167 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:34:37.444 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:34:48.950 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:34:59.919 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:35:11.279 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:35:22.244 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:35:40.683 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:35:54.153 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:36:05.031 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:36:15.899 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:36:28.306 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:36:41.458 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:37:16.583 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:37:16.585 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:37:16.588 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.590 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:37:16.595 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:37:16.597 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.600 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.602 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.604 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.607 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.609 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.612 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.617 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:37:16.619 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.621 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.624 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.629 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.632 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.638 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:37:16.640 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:37:16.646 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:37:16.650 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:37:16.670 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:37:16.672 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:37:16.677 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:37:16.680 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:37:16.683 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:37:16.687 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:37:16.737 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:37:16.741 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:37:49.917 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.6785, Test accuracy: 84.83%
+2024-04-28 16:37:49.921 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8479, Recall: 0.8451, F1 Score: 0.8465
+2024-04-28 16:37:49.963 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:38:19.340 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8483
+2024-04-28 16:38:19.341 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:38:19.353 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 98.1
+2024-04-28 16:38:19.360 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 95.9
+2024-04-28 16:38:19.366 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 85.9
+2024-04-28 16:38:19.369 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 88.7
+2024-04-28 16:38:19.374 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 83.6
+2024-04-28 16:38:19.376 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 71.3
+2024-04-28 16:38:19.378 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 85.5
+2024-04-28 16:38:19.381 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 88.1
+2024-04-28 16:38:19.383 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 69.1
+2024-04-28 16:38:19.386 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 78.8
+2024-04-28 16:38:19.660 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 10/100 |
+2024-04-28 16:38:19.667 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:38:30.173 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:38:41.392 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:38:53.185 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:39:11.665 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:39:22.854 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:39:33.175 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:39:55.398 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:40:05.545 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:40:15.343 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:40:23.388 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:40:34.658 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:40:46.324 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:40:54.431 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:41:06.303 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:41:06.306 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:41:06.310 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.312 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.314 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.315 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.316 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:41:06.319 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.321 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.322 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.324 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:41:06.325 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:41:06.327 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.330 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.332 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.333 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.335 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:41:06.337 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.338 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:41:06.341 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.343 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:41:06.345 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:41:06.369 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:41:06.390 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:41:06.404 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:41:06.408 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:41:06.410 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:41:06.415 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:41:06.512 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:41:06.513 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:41:25.825 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.5771, Test accuracy: 86.32%
+2024-04-28 16:41:25.827 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8623, Recall: 0.8608, F1 Score: 0.8616
+2024-04-28 16:41:25.839 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:41:42.896 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8632
+2024-04-28 16:41:42.899 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:41:42.910 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 97.4
+2024-04-28 16:41:42.911 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 96.6
+2024-04-28 16:41:42.912 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 87.3
+2024-04-28 16:41:42.914 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 87.2
+2024-04-28 16:41:42.916 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 88.7
+2024-04-28 16:41:42.917 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 76.0
+2024-04-28 16:41:42.920 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 89.2
+2024-04-28 16:41:42.923 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 88.5
+2024-04-28 16:41:42.924 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 76.1
+2024-04-28 16:41:42.926 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 73.7
+2024-04-28 16:41:43.114 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 11/100 |
+2024-04-28 16:41:43.119 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:41:52.923 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:41:59.106 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:42:06.449 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:42:13.403 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:42:28.097 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:42:37.350 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:42:45.301 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:43:01.911 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:43:08.877 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:43:20.288 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:43:28.714 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:43:36.144 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:43:43.184 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:43:55.882 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:43:55.884 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:43:55.885 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.887 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:43:55.890 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.894 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.895 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.897 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.898 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:43:55.900 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.901 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.903 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.904 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:43:55.906 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:43:55.907 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.910 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.912 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:43:55.913 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.915 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.916 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.919 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:43:55.920 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:43:55.936 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:43:55.938 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:43:55.941 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:43:55.942 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:43:55.944 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:43:55.945 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:43:56.148 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:43:56.153 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:44:22.612 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.5141, Test accuracy: 87.57%
+2024-04-28 16:44:22.612 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8747, Recall: 0.8737, F1 Score: 0.8742
+2024-04-28 16:44:22.623 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:44:48.563 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8757
+2024-04-28 16:44:48.566 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:44:48.587 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 97.7
+2024-04-28 16:44:48.592 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 97.0
+2024-04-28 16:44:48.594 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 88.4
+2024-04-28 16:44:48.596 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 87.5
+2024-04-28 16:44:48.599 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 87.6
+2024-04-28 16:44:48.601 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 80.8
+2024-04-28 16:44:48.605 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 90.9
+2024-04-28 16:44:48.605 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 88.6
+2024-04-28 16:44:48.608 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 74.8
+2024-04-28 16:44:48.612 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 80.4
+2024-04-28 16:44:48.882 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 12/100 |
+2024-04-28 16:44:58.521 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:45:05.143 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:45:24.292 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:45:34.274 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:45:42.273 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:45:49.044 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:45:59.767 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:46:18.444 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:46:30.137 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:46:39.229 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:46:46.764 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:46:58.192 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:47:07.133 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:47:13.971 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:47:21.037 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:47:21.043 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:47:21.045 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:47:21.046 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:47:21.048 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.049 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.051 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:47:21.052 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:47:21.053 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.055 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.059 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.062 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.065 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.066 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:47:21.067 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.069 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.070 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.072 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.074 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:47:21.077 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.080 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.081 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:47:21.105 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:47:21.110 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:47:21.113 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:47:21.116 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:47:21.118 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:47:21.120 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:47:21.169 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:47:21.171 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:47:43.285 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.4611, Test accuracy: 88.55%
+2024-04-28 16:47:43.287 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8840, Recall: 0.8836, F1 Score: 0.8838
+2024-04-28 16:47:43.298 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:48:05.364 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8855
+2024-04-28 16:48:05.368 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:48:05.381 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 97.7
+2024-04-28 16:48:05.383 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 96.9
+2024-04-28 16:48:05.385 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 89.1
+2024-04-28 16:48:05.386 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 89.1
+2024-04-28 16:48:05.387 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 88.5
+2024-04-28 16:48:05.388 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 80.7
+2024-04-28 16:48:05.390 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 90.8
+2024-04-28 16:48:05.393 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 90.1
+2024-04-28 16:48:05.395 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 79.7
+2024-04-28 16:48:05.398 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 81.1
+2024-04-28 16:48:05.606 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 13/100 |
+2024-04-28 16:48:09.815 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:48:19.912 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:48:27.430 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:48:38.016 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:48:43.948 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:48:54.874 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:49:02.890 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:49:09.993 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:49:16.695 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:49:23.868 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:49:35.478 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:49:42.106 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:49:48.385 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:50:01.671 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:50:13.146 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:50:13.148 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:50:13.150 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:50:13.151 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.153 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.154 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.157 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:50:13.158 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.162 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.164 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:50:13.166 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.168 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.170 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.171 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.173 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.174 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:50:13.175 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.178 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.180 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.183 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:50:13.184 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:50:13.185 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:50:13.202 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:50:13.204 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:50:13.206 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:50:13.206 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:50:13.209 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:50:13.213 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:50:13.231 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:50:13.233 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:50:37.473 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.4272, Test accuracy: 89.07%
+2024-04-28 16:50:37.475 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8891, Recall: 0.8891, F1 Score: 0.8891
+2024-04-28 16:50:37.488 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:51:02.448 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8907
+2024-04-28 16:51:02.450 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:51:02.466 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 97.4
+2024-04-28 16:51:02.468 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 97.4
+2024-04-28 16:51:02.492 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 88.4
+2024-04-28 16:51:02.507 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 89.9
+2024-04-28 16:51:02.541 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 90.4
+2024-04-28 16:51:02.553 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 83.9
+2024-04-28 16:51:02.557 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 91.9
+2024-04-28 16:51:02.564 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 90.6
+2024-04-28 16:51:02.570 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 78.7
+2024-04-28 16:51:02.576 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 80.6
+2024-04-28 16:51:02.765 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 14/100 |
+2024-04-28 16:51:02.769 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:51:10.516 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:51:17.810 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:51:24.807 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:51:36.697 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:51:44.609 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:51:52.152 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:52:01.791 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:52:09.378 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:52:31.200 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:52:38.319 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:52:50.068 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:53:03.772 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:53:15.480 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:53:25.771 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:53:25.773 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:53:25.774 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.776 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.778 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.779 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.781 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:53:25.783 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.784 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.786 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.787 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.789 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.793 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:53:25.795 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:53:25.797 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.799 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.801 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.803 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:53:25.805 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.807 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:53:25.808 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:53:25.809 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:53:25.824 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:53:25.825 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:53:25.827 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:53:25.829 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:53:25.831 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:53:25.832 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:53:25.862 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:53:25.865 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:53:47.723 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.3985, Test accuracy: 89.81%
+2024-04-28 16:53:47.726 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.8969, Recall: 0.8965, F1 Score: 0.8967
+2024-04-28 16:53:47.739 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:54:15.228 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.8981
+2024-04-28 16:54:15.230 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:54:15.241 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 97.4
+2024-04-28 16:54:15.243 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 97.3
+2024-04-28 16:54:15.245 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 89.7
+2024-04-28 16:54:15.246 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 90.5
+2024-04-28 16:54:15.248 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 90.9
+2024-04-28 16:54:15.250 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 83.7
+2024-04-28 16:54:15.251 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 92.7
+2024-04-28 16:54:15.252 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 90.3
+2024-04-28 16:54:15.254 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 81.0
+2024-04-28 16:54:15.257 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 83.0
+2024-04-28 16:54:15.444 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 15/100 |
+2024-04-28 16:54:15.449 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:54:23.395 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 16:54:36.105 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:54:45.568 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:54:57.649 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:55:30.513 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:55:39.000 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:55:50.073 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:55:58.381 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:56:06.508 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:56:18.864 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:56:26.228 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:56:35.580 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:56:41.804 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:56:49.525 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 16:56:49.526 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 16:56:49.529 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.531 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.532 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:56:49.536 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.538 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.539 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.541 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:56:49.544 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:56:49.546 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:56:49.549 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.550 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.551 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:56:49.553 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.555 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.557 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.559 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 16:56:49.560 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.561 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.563 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.564 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 16:56:49.581 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 16:56:49.584 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 16:56:49.587 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 16:56:49.590 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 16:56:49.595 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 16:56:49.596 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 16:56:49.638 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 16:56:49.641 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 16:57:15.715 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.3781, Test accuracy: 90.16%
+2024-04-28 16:57:15.718 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.9006, Recall: 0.9003, F1 Score: 0.9004
+2024-04-28 16:57:15.734 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 16:57:48.586 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.9016
+2024-04-28 16:57:48.588 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 16:57:48.674 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 98.2
+2024-04-28 16:57:48.679 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 97.5
+2024-04-28 16:57:48.682 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 90.0
+2024-04-28 16:57:48.706 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 90.5
+2024-04-28 16:57:48.709 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 93.8
+2024-04-28 16:57:48.711 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 85.8
+2024-04-28 16:57:48.713 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 91.9
+2024-04-28 16:57:48.714 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 90.7
+2024-04-28 16:57:48.717 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 82.0
+2024-04-28 16:57:48.718 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 80.0
+2024-04-28 16:57:48.975 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 16/100 |
+2024-04-28 16:57:54.975 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 16:58:08.224 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 16:58:20.508 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 16:58:30.038 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 16:58:41.661 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 16:58:48.074 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 16:58:58.497 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 16:59:06.970 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 16:59:13.155 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 16:59:19.277 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 16:59:25.569 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 16:59:33.008 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 16:59:41.279 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 16:59:55.168 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 17:00:18.795 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 17:00:18.800 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 17:00:18.801 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:00:18.802 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.804 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:00:18.807 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.811 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:00:18.815 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.817 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.819 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:00:18.821 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.824 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.826 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.828 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.831 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.832 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.833 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.834 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.836 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.837 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:00:18.838 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:00:18.839 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:00:18.856 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 17:00:18.860 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 17:00:18.866 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 17:00:18.868 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 17:00:18.870 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 17:00:18.872 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 17:00:18.909 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 17:00:18.916 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 17:00:45.039 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.3584, Test accuracy: 90.70%
+2024-04-28 17:00:45.043 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.9059, Recall: 0.9057, F1 Score: 0.9058
+2024-04-28 17:00:45.057 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 17:01:11.896 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.907
+2024-04-28 17:01:11.899 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 17:01:11.911 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 98.2
+2024-04-28 17:01:11.914 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 98.3
+2024-04-28 17:01:11.916 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 89.9
+2024-04-28 17:01:11.918 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 90.1
+2024-04-28 17:01:11.919 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 93.3
+2024-04-28 17:01:11.921 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 86.4
+2024-04-28 17:01:11.926 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 93.9
+2024-04-28 17:01:11.929 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 91.0
+2024-04-28 17:01:11.933 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 80.9
+2024-04-28 17:01:11.936 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 83.6
+2024-04-28 17:01:12.197 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 17/100 |
+2024-04-28 17:01:12.204 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 1 to flip class 1 to class 7
+2024-04-28 17:01:24.913 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 20 to flip class 1 to class 7
+2024-04-28 17:01:32.669 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 2 to flip class 1 to class 7
+2024-04-28 17:01:40.800 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
+2024-04-28 17:01:53.314 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 5 to flip class 1 to class 7
+2024-04-28 17:02:05.864 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 14 to flip class 1 to class 7
+2024-04-28 17:02:20.477 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 9 to flip class 1 to class 7
+2024-04-28 17:02:41.690 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 17:02:58.637 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 3 to flip class 1 to class 7
+2024-04-28 17:03:06.956 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 6 to flip class 1 to class 7
+2024-04-28 17:03:14.685 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 19 to flip class 1 to class 7
+2024-04-28 17:03:31.848 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 11 to flip class 1 to class 7
+2024-04-28 17:03:39.974 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 15 to flip class 1 to class 7
+2024-04-28 17:03:53.634 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 10 to flip class 1 to class 7
+2024-04-28 17:04:00.839 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:58 - -------------------------------------
+2024-04-28 17:04:00.840 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:59 - Defense result:
+2024-04-28 17:04:00.842 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.843 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:04:00.844 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.846 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.847 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.850 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.852 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.854 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.855 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:04:00.856 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.858 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:04:00.859 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.860 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.862 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.864 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:04:00.865 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:04:00.868 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.870 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.871 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Good update scored 1
+2024-04-28 17:04:00.872 | INFO     | federated_learning.fl_algorithm.DPFLA:score:64 - Bad update scored 0
+2024-04-28 17:04:00.889 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:81 - Number of Bad updates scoring 0: 
+2024-04-28 17:04:00.891 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:82 - Number of Good updates scoring 1: 
+2024-04-28 17:04:00.892 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:84 - Clustering Accuracy: 100.00%
+2024-04-28 17:04:00.894 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:85 - Clustering Precision: 1.0000
+2024-04-28 17:04:00.897 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:86 - Clustering Recall: 1.0000
+2024-04-28 17:04:00.900 | DEBUG    | federated_learning.fl_algorithm.DPFLA:score:87 - Clustering F1-score: 1.0000
+2024-04-28 17:04:00.921 | DEBUG    | federated_learning.fl_core:run_experiment:379 - Aggregation took
+2024-04-28 17:04:00.922 | DEBUG    | federated_learning.fl_core:run_experiment:381 - Global weights
+2024-04-28 17:04:23.560 | DEBUG    | federated_learning.fl_core:test:149 - Average test loss: 0.3392, Test accuracy: 91.03%
+2024-04-28 17:04:23.564 | DEBUG    | federated_learning.fl_core:test:150 - Precision: 0.9094, Recall: 0.9089, F1 Score: 0.9091
+2024-04-28 17:04:23.575 | INFO     | federated_learning.fl_core:run_experiment:425 - Backdoor ASR 0.0
+2024-04-28 17:04:48.744 | INFO     | federated_learning.fl_core:run_experiment:454 - Detection accuracy : 0.9103
+2024-04-28 17:04:48.751 | DEBUG    | federated_learning.fl_core:run_experiment:458 - Class      - Accuracy
+2024-04-28 17:04:48.775 | INFO     | federated_learning.fl_core:run_experiment:460 - Zero       - 98.2
+2024-04-28 17:04:48.779 | INFO     | federated_learning.fl_core:run_experiment:460 - One        - 98.4
+2024-04-28 17:04:48.783 | INFO     | federated_learning.fl_core:run_experiment:460 - Two        - 89.6
+2024-04-28 17:04:48.785 | INFO     | federated_learning.fl_core:run_experiment:460 - Three      - 91.2
+2024-04-28 17:04:48.789 | INFO     | federated_learning.fl_core:run_experiment:460 - Four       - 92.0
+2024-04-28 17:04:48.793 | INFO     | federated_learning.fl_core:run_experiment:460 - Five       - 85.8
+2024-04-28 17:04:48.804 | INFO     | federated_learning.fl_core:run_experiment:460 - Six        - 93.4
+2024-04-28 17:04:48.808 | INFO     | federated_learning.fl_core:run_experiment:460 - Seven      - 91.0
+2024-04-28 17:04:48.810 | INFO     | federated_learning.fl_core:run_experiment:460 - Eight      - 83.6
+2024-04-28 17:04:48.812 | INFO     | federated_learning.fl_core:run_experiment:460 - Nine       - 85.8
+2024-04-28 17:04:49.055 | DEBUG    | federated_learning.fl_core:run_experiment:256 - | Global training round : 18/100 |
+2024-04-28 17:04:49.059 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 7 to flip class 1 to class 7
+2024-04-28 17:04:59.074 | INFO     | federated_learning.client:participant_update:88 - Label flipping attack launched by Client 12 to flip class 1 to class 7
